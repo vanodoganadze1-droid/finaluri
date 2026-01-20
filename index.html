@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HoopStore</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <a href="#mainContent" class="skip-link">Skip to content</a>
+
+  <div id="cookieBanner" class="cookie-banner" role="dialog" aria-live="polite">
+    <p>We use cookies to improve site experience. By continuing you accept our cookies.</p>
+    <button id="acceptCookies" class="btn">Accept</button>
+  </div>
+
+  <header>
+    <div class="logo">HoopStore</div>
+    <nav id="navLinks" aria-label="Primary navigation">
+      <ul>
+        <li><a href="#home" class="nav-link" data-route="#home">Home</a></li>
+        <li><a href="#shop" class="nav-link" data-route="#shop">Shop</a></li>
+        <li><a href="#register" class="nav-link" data-route="#register">Register</a></li>
+        <li><a href="#contact" class="nav-link" data-route="#contact">Contact</a></li>
+        <li><a href="#reviews" class="nav-link" data-route="#reviews">Reviews</a></li>
+        <li><span id="cartCount">0</span> 🛒</li>
+      </ul>
+    </nav>
+    <div id="burger" tabindex="0" aria-expanded="false" aria-controls="navLinks">☰</div>
+  </header>
+
+  <main id="mainContent">
+
+    <section id="home" class="page hero">
+      <h1>Basketball Jerseys & Shoes</h1>
+      <p>Level up your game with premium gear</p>
+    </section>
+
+    <section id="shop" class="page products" hidden>
+      <h2>Shop</h2>
+
+      <div class="shop-tabs">
+        <button class="tab-btn" data-shop="all">All</button>
+        <button class="tab-btn" data-shop="shoes">Shoes</button>
+        <button class="tab-btn" data-shop="jerseys">Jerseys</button>
+      </div>
+
+      <div class="product-list" id="productList"></div>
+    </section>
+
+    <section id="register" class="page register" hidden>
+      <h2>Create Account</h2>
+      <form id="registerForm">
+        <input type="text" id="username" placeholder="Username" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <div class="password-wrapper">
+          <input type="password" id="password" placeholder="Password" required>
+          <span id="togglePassword">👁</span>
+        </div>
+        <button type="submit">Register</button>
+      </form>
+    </section>
+
+    <section id="contact" class="page contact" hidden>
+      <h2>Contact Us</h2>
+      <p>Email: support@hoopstore.com</p>
+    </section>
+
+    <section id="reviews" class="page reviews" hidden>
+      <h2>Customer Reviews</h2>
+      <div id="reviewsList">Loading reviews...</div>
+      <form id="reviewForm">
+        <h3>Leave a Review</h3>
+        <input type="text" id="reviewName" placeholder="Your Name" required>
+        <textarea id="reviewComment" placeholder="Your Comment" required></textarea>
+        <div class="rating">
+          <label>
+            <input type="radio" name="rating" value="1" required> 1 Star
+          </label>
+          <label>
+            <input type="radio" name="rating" value="2"> 2 Stars
+          </label>
+          <label>
+            <input type="radio" name="rating" value="3"> 3 Stars
+          </label>
+          <label>
+            <input type="radio" name="rating" value="4"> 4 Stars
+          </label>
+          <label>
+            <input type="radio" name="rating" value="5"> 5 Stars
+          </label>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2025 HoopStore. All rights reserved.</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
